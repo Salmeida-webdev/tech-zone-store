@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechZone Store | Mini E-commerce Premium</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="container header-content">
+          <a href="#" class="logo"> TechZone <span>Store</span> </a>
+
+          <nav class="nav-menu">
+            <a href="#produtos">Produtos</a>
+            <a href="#beneficios">Benefícios</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+
+          <button class="cart-button" id="openCartBtn" type="button">
+            <span>🛒</span>
+            Carrinho
+            <strong id="cartCount">0</strong>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="inicio">
+          <div class="hero-bg">
+            <img src="./assets/banner.png" alt="Banner TechZone Store" />
+          </div>
+
+          <div class="hero-overlay"></div>
+
+          <div class="container hero-content">
+            <div class="hero-text">
+              <span class="eyebrow">Tech premium • ofertas selecionadas</span>
+
+              <h1>Tecnologia premium para o seu dia a dia</h1>
+
+              <p>
+                Produtos modernos, selecionados e apresentados em uma
+                experiência de compra rápida, intuitiva e profissional.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#produtos" class="btn btn-primary">Ver produtos</a>
+                <button
+                  class="btn btn-secondary"
+                  id="heroCartBtn"
+                  type="button"
+                >
+                  Abrir carrinho
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section products-section" id="produtos">
+          <div class="container">
+            <div class="section-heading">
+              <span>Catálogo premium</span>
+              <h2>Produtos em destaque</h2>
+              <p>
+                Uma vitrine moderna com produtos eletrônicos, cards
+                profissionais, botões de compra e integração com carrinho
+                avançado.
+              </p>
+            </div>
+
+            <div class="products-grid">
+              <article
+                class="product-card"
+                data-id="1"
+                data-name="Smartphone X Pro"
+                data-price="2499"
+                data-image="./assets/produto1.png"
+              >
+                <div class="product-image">
+                  <img src="./assets/produto1.png" alt="Smartphone X Pro" />
+                  <span class="product-badge">Mais vendido</span>
+                </div>
+                <div class="product-info">
+                  <span class="product-category">Smartphone</span>
+                  <h3>Smartphone X Pro</h3>
+                  <p>Desempenho rápido, design premium e câmera avançada.</p>
+                  <strong>R$ 2.499,00</strong>
+                  <div class="product-actions">
+                    <button class="btn btn-primary add-to-cart" type="button">
+                      Adicionar ao carrinho
+                    </button>
+                    <button class="btn btn-outline buy-now" type="button">
+                      Comprar agora
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-id="2"
+                data-name="Fone Bluetooth AirSound"
+                data-price="299"
+                data-image="./assets/produto2.png"
+              >
+                <div class="product-image">
+                  <img
+                    src="./assets/produto2.png"
+                    alt="Fone Bluetooth AirSound"
+                  />
+                  <span class="product-badge">Áudio premium</span>
+                </div>
+                <div class="product-info">
+                  <span class="product-category">Áudio</span>
+                  <h3>Fone Bluetooth AirSound</h3>
+                  <p>
+                    Som limpo, conexão estável e bateria para o dia inteiro.
+                  </p>
+                  <strong>R$ 299,00</strong>
+                  <div class="product-actions">
+                    <button class="btn btn-primary add-to-cart" type="button">
+                      Adicionar ao carrinho
+                    </button>
+                    <button class="btn btn-outline buy-now" type="button">
+                      Comprar agora
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-id="3"
+                data-name="Smartwatch Fit Pro"
+                data-price="399"
+                data-image="./assets/produto3.png"
+              >
+                <div class="product-image">
+                  <img src="./assets/produto3.png" alt="Smartwatch Fit Pro" />
+                  <span class="product-badge">Fitness</span>
+                </div>
+                <div class="product-info">
+                  <span class="product-category">Wearable</span>
+                  <h3>Smartwatch Fit Pro</h3>
+                  <p>Monitore treinos, notificações, sono e batimentos.</p>
+                  <strong>R$ 399,00</strong>
+                  <div class="product-actions">
+                    <button class="btn btn-primary add-to-cart" type="button">
+                      Adicionar ao carrinho
+                    </button>
+                    <button class="btn btn-outline buy-now" type="button">
+                      Comprar agora
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-id="4"
+                data-name="Notebook UltraTech"
+                data-price="4299"
+                data-image="./assets/produto4.png"
+              >
+                <div class="product-image">
+                  <img src="./assets/produto4.png" alt="Notebook UltraTech" />
+                  <span class="product-badge">Performance</span>
+                </div>
+                <div class="product-info">
+                  <span class="product-category">Notebook</span>
+                  <h3>Notebook UltraTech</h3>
+                  <p>
+                    Ideal para produtividade, estudos, trabalho e multitarefas.
+                  </p>
+                  <strong>R$ 4.299,00</strong>
+                  <div class="product-actions">
+                    <button class="btn btn-primary add-to-cart" type="button">
+                      Adicionar ao carrinho
+                    </button>
+                    <button class="btn btn-outline buy-now" type="button">
+                      Comprar agora
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-id="5"
+                data-name="Mouse Gamer RGB"
+                data-price="149"
+                data-image="./assets/produto5.png"
+              >
+                <div class="product-image">
+                  <img src="./assets/produto5.png" alt="Mouse Gamer RGB" />
+                  <span class="product-badge">Gamer</span>
+                </div>
+                <div class="product-info">
+                  <span class="product-category">Periférico</span>
+                  <h3>Mouse Gamer RGB</h3>
+                  <p>
+                    Precisão, conforto e iluminação RGB para setups modernos.
+                  </p>
+                  <strong>R$ 149,00</strong>
+                  <div class="product-actions">
+                    <button class="btn btn-primary add-to-cart" type="button">
+                      Adicionar ao carrinho
+                    </button>
+                    <button class="btn btn-outline buy-now" type="button">
+                      Comprar agora
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-id="6"
+                data-name="Teclado Mecânico Pro"
+                data-price="349"
+                data-image="./assets/produto6.png"
+              >
+                <div class="product-image">
+                  <img src="./assets/produto6.png" alt="Teclado Mecânico Pro" />
+                  <span class="product-badge">Setup pro</span>
+                </div>
+                <div class="product-info">
+                  <span class="product-category">Periférico</span>
+                  <h3>Teclado Mecânico Pro</h3>
+                  <p>
+                    Teclas responsivas, construção robusta e visual premium.
+                  </p>
+                  <strong>R$ 349,00</strong>
+                  <div class="product-actions">
+                    <button class="btn btn-primary add-to-cart" type="button">
+                      Adicionar ao carrinho
+                    </button>
+                    <button class="btn btn-outline buy-now" type="button">
+                      Comprar agora
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-id="7"
+                data-name="Caixa Bluetooth BassMax"
+                data-price="229"
+                data-image="./assets/produto7.png"
+              >
+                <div class="product-image">
+                  <img
+                    src="./assets/produto7.png"
+                    alt="Caixa Bluetooth BassMax"
+                  />
+                  <span class="product-badge">Graves fortes</span>
+                </div>
+                <div class="product-info">
+                  <span class="product-category">Áudio</span>
+                  <h3>Caixa Bluetooth BassMax</h3>
+                  <p>Som potente, bateria duradoura e conexão sem fio.</p>
+                  <strong>R$ 229,00</strong>
+                  <div class="product-actions">
+                    <button class="btn btn-primary add-to-cart" type="button">
+                      Adicionar ao carrinho
+                    </button>
+                    <button class="btn btn-outline buy-now" type="button">
+                      Comprar agora
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-id="8"
+                data-name="Monitor Full HD 24”"
+                data-price="799"
+                data-image="./assets/produto8.png"
+              >
+                <div class="product-image">
+                  <img
+                    src="./assets/produto8.png"
+                    alt="Monitor Full HD 24 polegadas"
+                  />
+                  <span class="product-badge">Full HD</span>
+                </div>
+                <div class="product-info">
+                  <span class="product-category">Monitor</span>
+                  <h3>Monitor Full HD 24”</h3>
+                  <p>Imagem nítida, bom tamanho e ótimo custo-benefício.</p>
+                  <strong>R$ 799,00</strong>
+                  <div class="product-actions">
+                    <button class="btn btn-primary add-to-cart" type="button">
+                      Adicionar ao carrinho
+                    </button>
+                    <button class="btn btn-outline buy-now" type="button">
+                      Comprar agora
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-id="9"
+                data-name="Headset Gamer Pro"
+                data-price="259"
+                data-image="./assets/produto9.png"
+              >
+                <div class="product-image">
+                  <img src="./assets/produto9.png" alt="Headset Gamer Pro" />
+                  <span class="product-badge">Imersivo</span>
+                </div>
+                <div class="product-info">
+                  <span class="product-category">Gamer</span>
+                  <h3>Headset Gamer Pro</h3>
+                  <p>
+                    Áudio imersivo, microfone ajustável e conforto prolongado.
+                  </p>
+                  <strong>R$ 259,00</strong>
+                  <div class="product-actions">
+                    <button class="btn btn-primary add-to-cart" type="button">
+                      Adicionar ao carrinho
+                    </button>
+                    <button class="btn btn-outline buy-now" type="button">
+                      Comprar agora
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-id="10"
+                data-name="Carregador Turbo USB-C"
+                data-price="89"
+                data-image="./assets/produto10.png"
+              >
+                <div class="product-image">
+                  <img
+                    src="./assets/produto10.png"
+                    alt="Carregador Turbo USB-C"
+                  />
+                  <span class="product-badge">Turbo</span>
+                </div>
+                <div class="product-info">
+                  <span class="product-category">Acessório</span>
+                  <h3>Carregador Turbo USB-C</h3>
+                  <p>
+                    Carregamento rápido, seguro e compatível com vários
+                    aparelhos.
+                  </p>
+                  <strong>R$ 89,00</strong>
+                  <div class="product-actions">
+                    <button class="btn btn-primary add-to-cart" type="button">
+                      Adicionar ao carrinho
+                    </button>
+                    <button class="btn btn-outline buy-now" type="button">
+                      Comprar agora
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-id="11"
+                data-name="Tablet SmartPad 10”"
+                data-price="1299"
+                data-image="./assets/produto11.png"
+              >
+                <div class="product-image">
+                  <img
+                    src="./assets/produto11.png"
+                    alt="Tablet SmartPad 10 polegadas"
+                  />
+                  <span class="product-badge">Portátil</span>
+                </div>
+                <div class="product-info">
+                  <span class="product-category">Tablet</span>
+                  <h3>Tablet SmartPad 10”</h3>
+                  <p>Tela ampla, bom desempenho e ideal para estudo e lazer.</p>
+                  <strong>R$ 1.299,00</strong>
+                  <div class="product-actions">
+                    <button class="btn btn-primary add-to-cart" type="button">
+                      Adicionar ao carrinho
+                    </button>
+                    <button class="btn btn-outline buy-now" type="button">
+                      Comprar agora
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-id="12"
+                data-name="Câmera HD Digital"
+                data-price="599"
+                data-image="./assets/produto12.png"
+              >
+                <div class="product-image">
+                  <img src="./assets/produto12.png" alt="Câmera HD Digital" />
+                  <span class="product-badge">HD</span>
+                </div>
+                <div class="product-info">
+                  <span class="product-category">Imagem</span>
+                  <h3>Câmera HD Digital</h3>
+                  <p>
+                    Boa definição, design compacto e uso prático no dia a dia.
+                  </p>
+                  <strong>R$ 599,00</strong>
+                  <div class="product-actions">
+                    <button class="btn btn-primary add-to-cart" type="button">
+                      Adicionar ao carrinho
+                    </button>
+                    <button class="btn btn-outline buy-now" type="button">
+                      Comprar agora
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section benefits-section" id="beneficios">
+          <div class="container">
+            <div class="section-heading">
+              <span>Por que escolher</span>
+              <h2>Experiência de compra moderna</h2>
+            </div>
+
+            <div class="benefits-grid">
+              <div class="benefit-card">
+                <div class="benefit-icon">🔒</div>
+                <h3>Pagamento seguro</h3>
+                <p>
+                  Checkout simulado com visual profissional para apresentação em
+                  portfólio.
+                </p>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">🚚</div>
+                <h3>Envio rápido</h3>
+                <p>
+                  Seção comercial demonstrativa para transmitir confiança ao
+                  visitante.
+                </p>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">🛡️</div>
+                <h3>Garantia</h3>
+                <p>
+                  Bloco de benefício pensado para simular uma loja real e
+                  confiável.
+                </p>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">💬</div>
+                <h3>Suporte especializado</h3>
+                <p>
+                  Atendimento fictício para deixar o projeto mais completo e
+                  comercial.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section testimonials-section" id="depoimentos">
+          <div class="container">
+            <div class="section-heading">
+              <span>Depoimentos</span>
+              <h2>Clientes satisfeitos</h2>
+            </div>
+
+            <div class="testimonials-grid">
+              <article class="testimonial-card">
+                <p>
+                  “A loja ficou muito profissional, rápida e com visual
+                  moderno.”
+                </p>
+                <div>
+                  <strong>Marcos Silva</strong>
+                  <span>Cliente fictício</span>
+                </div>
+              </article>
+
+              <article class="testimonial-card">
+                <p>
+                  “O carrinho é simples de usar e a experiência parece de loja
+                  real.”
+                </p>
+                <div>
+                  <strong>Ana Beatriz</strong>
+                  <span>Cliente fictício</span>
+                </div>
+              </article>
+
+              <article class="testimonial-card">
+                <p>
+                  “Projeto excelente para demonstrar habilidade em front-end.”
+                </p>
+                <div>
+                  <strong>João Pedro</strong>
+                  <span>Cliente fictício</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section faq-section" id="faq">
+          <div class="container">
+            <div class="section-heading">
+              <span>FAQ</span>
+              <h2>Perguntas frequentes</h2>
+            </div>
+
+            <div class="faq-list">
+              <details>
+                <summary>O pagamento é real?</summary>
+                <p>
+                  Não. Este projeto possui checkout simulado, ideal para
+                  portfólio.
+                </p>
+              </details>
+
+              <details>
+                <summary>O carrinho funciona?</summary>
+                <p>
+                  Sim. É possível adicionar produtos, alterar quantidades,
+                  remover itens e calcular total.
+                </p>
+              </details>
+
+              <details>
+                <summary>Serve para cliente real?</summary>
+                <p>
+                  Serve como base front-end. Para venda real, seria necessário
+                  integrar backend e meio de pagamento.
+                </p>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <section class="final-cta">
+          <div class="container final-cta-content">
+            <div>
+              <span>Pronto para comprar?</span>
+              <h2>Escolha seus produtos favoritos e monte seu setup.</h2>
+            </div>
+
+            <div class="final-cta-actions">
+              <a href="#produtos" class="btn btn-primary">Ver produtos</a>
+              <button class="btn btn-secondary" id="finalCartBtn" type="button">
+                Abrir carrinho
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+          <div>
+            <span>TechZone Store</span>
+            <h2>Seu carrinho</h2>
+          </div>
+
+          <button class="icon-button" id="closeCartBtn" type="button">×</button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+          <p class="empty-cart">Seu carrinho está vazio.</p>
+        </div>
+
+        <div class="cart-summary">
+          <div class="cart-total-row">
+            <span>Total</span>
+            <strong id="cartTotal">R$ 0,00</strong>
+          </div>
+
+          <button class="btn btn-primary full" id="checkoutBtn" type="button">
+            Finalizar compra
+          </button>
+
+          <small
+            >Checkout demonstrativo — nenhum pagamento real será
+            processado.</small
+          >
+        </div>
+      </aside>
+
+      <div class="overlay" id="overlay"></div>
+
+      <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-box">
+          <button
+            class="icon-button modal-close"
+            id="closeCheckoutBtn"
+            type="button"
+          >
+            ×
+          </button>
+
+          <span class="eyebrow">Checkout simulado</span>
+          <h2>Finalizar compra</h2>
+          <p>Preencha os dados abaixo para simular a finalização do pedido.</p>
+
+          <form id="checkoutForm">
+            <div class="form-group">
+              <label for="customerName">Nome completo</label>
+              <input
+                id="customerName"
+                type="text"
+                placeholder="Digite seu nome"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="customerEmail">E-mail</label>
+              <input
+                id="customerEmail"
+                type="email"
+                placeholder="seuemail@exemplo.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="customerPayment">Forma de pagamento</label>
+              <select id="customerPayment" required>
+                <option value="">Selecione</option>
+                <option value="pix">Pix</option>
+                <option value="cartao">Cartão de crédito</option>
+                <option value="boleto">Boleto</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary full" type="submit">
+              Confirmar pedido
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container footer-content">
+          <a href="#" class="logo">TechZone <span>Store</span></a>
+          <p>Projeto fictício desenvolvido para portfólio — TechZone Store.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
