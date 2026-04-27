@@ -666,6 +666,198 @@
       </footer>
     </div>
 
-    <script src="./script.js"></script>
+    <script>
+
+// ===== ELEMENTOS =====
+const cartDrawer = document.getElementById("cartDrawer");
+const overlay = document.getElementById("overlay");
+
+const cartItems = document.getElementById("cartItems");
+const cartCount = document.getElementById("cartCount");
+const cartTotal = document.getElementById("cartTotal");
+
+const checkoutModal = document.getElementById("checkoutModal");
+
+// BOTÕES
+const openCartBtn = document.getElementById("openCartBtn");
+const heroCartBtn = document.getElementById("heroCartBtn");
+const finalCartBtn = document.getElementById("finalCartBtn");
+const closeCartBtn = document.getElementById("closeCartBtn");
+const checkoutBtn = document.getElementById("checkoutBtn");
+const closeCheckoutBtn = document.getElementById("closeCheckoutBtn");
+
+let cart = [];
+
+// ===== FORMATAR =====
+function money(v) {
+  return v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+}
+
+// ===== ABRIR/CLOSE =====
+function openCart() {
+  cartDrawer.classList.add("active");
+  overlay.classList.add("active");
+}
+
+function closeCart() {
+  cartDrawer.classList.remove("active");
+  overlay.classList.remove("active");
+}
+
+function openCheckout() {
+  if (cart.length === 0) {
+    alert("Adicione um produto primeiro.");
+    return;
+  }
+
+  checkoutModal.classList.add("active");
+  overlay.classList.add("active");
+}
+
+function closeCheckout() {
+  checkoutModal.classList.remove("active");
+  overlay.classList.remove("active");
+}
+
+// ===== PRODUTO =====
+function getProduct(btn) {
+  const card = btn.closest(".product-card");
+
+  return {
+    id: card.dataset.id,
+    name: card.dataset.name,
+    price: Number(card.dataset.price),
+    image: card.dataset.image,
+    quantity: 1
+  };
+}
+
+// ===== ADD =====
+function addToCart(prod) {
+  const exists = cart.find(p => p.id === prod.id);
+
+  if (exists) {
+    exists.quantity++;
+  } else {
+    cart.push(prod);
+  }
+
+  updateCart();
+  openCart();
+}
+
+// ===== UPDATE =====
+function updateCart() {
+  cartItems.innerHTML = "";
+
+  if (cart.length === 0) {
+    cartItems.innerHTML = "<p>Seu carrinho está vazio</p>";
+  }
+
+  let total = 0;
+  let count = 0;
+
+  cart.forEach(p => {
+    total += p.price * p.quantity;
+    count += p.quantity;
+
+    const el = document.createElement("div");
+
+    el.innerHTML = `
+      <div class="cart-item">
+        <img src="${p.image}">
+        <div>
+          <h4>${p.name}</h4>
+          <p>${money(p.price)}</p>
+
+          <div>
+            <button onclick="dec('${p.id}')">-</button>
+            <span>${p.quantity}</span>
+            <button onclick="inc('${p.id}')">+</button>
+          </div>
+
+          <button onclick="remove('${p.id}')">Remover</button>
+        </div>
+      </div>
+    `;
+
+    cartItems.appendChild(el);
+  });
+
+  cartTotal.textContent = money(total);
+  cartCount.textContent = count;
+}
+
+// ===== CONTROLES =====
+function inc(id) {
+  const item = cart.find(p => p.id === id);
+  if (item) item.quantity++;
+  updateCart();
+}
+
+function dec(id) {
+  const item = cart.find(p => p.id === id);
+
+  if (!item) return;
+
+  if (item.quantity > 1) item.quantity--;
+  else remove(id);
+
+  updateCart();
+}
+
+function remove(id) {
+  cart = cart.filter(p => p.id !== id);
+  updateCart();
+}
+
+// ===== EVENTOS =====
+
+// BOTÕES PRODUTO
+document.querySelectorAll(".add-to-cart").forEach(btn => {
+  btn.onclick = () => addToCart(getProduct(btn));
+});
+
+document.querySelectorAll(".buy-now").forEach(btn => {
+  btn.onclick = () => {
+    addToCart(getProduct(btn));
+    openCheckout();
+  };
+});
+
+// HEADER / HERO / CTA
+openCartBtn.onclick = openCart;
+heroCartBtn.onclick = openCart;
+finalCartBtn.onclick = openCart;
+closeCartBtn.onclick = closeCart;
+
+// CHECKOUT
+checkoutBtn.onclick = openCheckout;
+closeCheckoutBtn.onclick = closeCheckout;
+
+// OVERLAY
+overlay.onclick = () => {
+  closeCart();
+  closeCheckout();
+};
+
+// FORM
+document.getElementById("checkoutForm").onsubmit = (e) => {
+  e.preventDefault();
+
+  alert("Compra finalizada (simulação)");
+
+  cart = [];
+  updateCart();
+
+  closeCheckout();
+  closeCart();
+};
+
+updateCart();
+
+</script>
+</body>
+</html>
   </body>
 </html>
